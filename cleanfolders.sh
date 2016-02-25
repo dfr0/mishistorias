@@ -11,9 +11,9 @@
 
 function borrar() { 
 
-	for i in $(sudo find ${DEST} -type d -empty -exec {} \;) ; do
+	for i in $(sudo find ${DEST} -type d -empty -exec rm -rf '{}' \;) ; do
 
-		echo $i
+		echo "ficheros borrados $i" > clean.log
 	done
 }
 
