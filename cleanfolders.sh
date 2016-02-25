@@ -8,7 +8,7 @@
 #
 # --- Options processing -------------------------------------------
 #path= /home/mishistorias
-DEST= "/home/myhouse/Music"
+DEST= "/home/myhouse/Music";
 
 
 # --- Locks -------------------------------------------------------
@@ -20,9 +20,9 @@ DEST= "/home/myhouse/Music"
 # --- Body --------------------------------------------------------
 #  SCRIPT LOGIC GOES HERE
 
-if $(find ${DEST} -maxdepth 0 -empty -exec echo {} is empthy. \;) ; then
+if $(sudo find ${DEST} -type d -empty -exec echo '{}' \;) ; then
 
-echo "el directorio contiene carpetas vacias $1" 
+echo "el directorio contiene carpetas vacias" 
 
 fi
 
