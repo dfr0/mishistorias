@@ -34,7 +34,7 @@ echo "Seleccione las carpetas para escanear"
 
 echo
 
-read -p 'Origen:' DEST 
+read -p 'Origen: ' DEST 
 
 if [ -d  "$DEST" ]; then
 
@@ -62,15 +62,10 @@ echo
 
 read -p 'Que dices cerdo? ' RESPUESTA
 
-if ["$RESPUESTA" == 'si'];  then
+if [[ "$RESPUESTA" = "si" ]] ;  then
 
-echo $DEST
-
-else
-
-exit 0
+borrar
 
 fi
-
 
 #-----------------------------------------------------------------
