@@ -1,13 +1,12 @@
 #!/bin/bash
 
 # ------------------------------------------------------------------
-# [Author] Title
-#          Description
+# Creado por david faro
+#         
 # i make this script for clean empthy folders
 #
 #
 # --- Options processing -------------------------------------------
-#path= /home/mishistorias
 
 function borrar() { 
 
@@ -17,14 +16,7 @@ function borrar() {
 	done
 }
 
-# --- Locks -------------------------------------------------------
-#LOCK_FILE=/tmp/$SUBJECT.lock
-#if [ -f "$LOCK_FILE" ]; then
-#   echo "Script is already running"
-#   exit
-#fi
-# --- Body --------------------------------------------------------
-#  SCRIPT LOGIC GOES HERE
+#---------BODY------------
 
 echo "########Script para la limpieza de carpetas vacias##############"
 
