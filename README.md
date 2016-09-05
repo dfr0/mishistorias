@@ -3,7 +3,7 @@ para mis pruebas y mis historias
 
 Template for scripts
 
->#!/bin/sh
+ #!/bin/sh
 
 # ------------------------------------------------------------------
 # [Author] Title
