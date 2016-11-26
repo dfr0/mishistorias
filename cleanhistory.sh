@@ -15,13 +15,11 @@ echo ""
 
 
 function limpieza() {
-for i in $(bleachbit -l) ; do bleachbit -c $i; exit 0;  done 
+for i in $(bleachbit -l) ; do bleachbit -c $i; done 
 }
 
 echo "procedemos a limpiar el sistema para salvaguardar la privacidad"
-limpieza 2>&1
+limpieza 2>&1 ; exit 0
 
-echo ""
-echo ""
 
 

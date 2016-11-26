@@ -10,17 +10,17 @@
 DAY=`date +%d`
 MONTH=`date +%m`
 YEAR=`date +%Y`
-BKDIR="/home/$USER/misbackups/$YEAR/$MONTH/$DAY"
-BKLOG="/home/$USER/misbackups/$YEAR/$MONTH/$DAY.log"
+BKDIR="$HOME/misbackups/$YEAR/$MONTH/$DAY"
+BKLOG="$HOME/misbackups/$YEAR/$MONTH/$DAY.log"
 ARRPOS="0" 
 
 echo "Quieres hacer un backup?"
 
-echo
+echo ""
 
 echo "Responde si/no"
 
-echo
+echo ""
 
 read -p '' HACEMOSBACKUP
 
@@ -28,11 +28,11 @@ echo
 
 echo --------------------------------------------------
 
-if [[ "$HACEMOSBACKUP" = "si" ]]; then
+if [[ "$HACEMOSBACKUP" == "si" ]]; then
 
 echo "procedemos a realizar la copia"
 
-wait 2
+sleep 2
 
 touch $BKLOG
 echo "To: frodorik21@gmail.com" >> $BKLOG;
@@ -42,17 +42,17 @@ echo -e ">> Backup for: $YEAR.$MONTH.$DAY started @ `date +%H:%M:%S`n" >> $BKLOG
 
 elif [ ! -d "$BKDIR" ]; then
 
-echo "creamos la carpeta donde se hara la copia" >> $BKLOG ; mkdir -p $BKDIR
+mkdir -p $BKDIR && echo "Creamos el directorio donde meteremos los backups"
 
 else
 
 echo "Bye Bye"
 
-wait 3
-
-exit 0
+sleep 3
 
 fi
+
+exit 0
 
 # Comienza el cuerpo del script
 
