@@ -1,34 +1,33 @@
 #!/bin/bash
 
-#### Script para desmontar la unidad/s cifrada/s ####
+DEVICE="/dev/sda5"
+PARTITION_NAME="misdatos"
+DEVICE_NAME="datos_sensibles"
+DEVICE_MAP="/dev/mapper/${DEVICE_NAME}"
+DEVICE_MOUNT_POINT="/mnt/${DEVICE_NAME}"
 
-UNIDAD_CIFRADA="misdatos"
-PUNTO_MONTAJE="df | grep ${UNIDAD_CIFRADA} | awk '{print $6}'"
-NOMBRE_UNIDAD="datos_sensibles"
-PARTICION="/dev/sda5"
+echo "####Proceso para montar la unidad cifrada####"
 
-function limpiar_pantalla () {
-clear
+echo "####Abrimos la unidad con la clave ##########"
+
+function open_disk(){
+sudo cryptsetup luksOpen "${DEVICE}" "${PARTITION_NAME}"
 }
 
-limpiar_pantalla
+open_disk
 
-echo "###### Script para el desmontaje de la unidad cifrada ######"
-sleep 1
-echo "###### Procedemos a desmontar la unidad cifrada #########"
-sleep 1
-echo "######## Cerramos unidad cifrada si está montada ############# "
 
-	if [[ $PUNTO_MONTAJE == 1 ]];then
-	sudo cryptsetup luksOpen $PARTICION 2>&1; sudo mount $UNIDAD_CIFRADA 2>&1;  
+	if [-d "${DEVICE_MOUNT_POINT}"]; then	
+	mkdir ${DEVICE_MOUNT_POINT}
+	echo "###Creamos directorio para el montaje####"
+	else
+	echo "###El directorio ya existe no hace falta crearlo#####"
 	fi
 
-function chequeo_unidad() {
-'df' 
+echo "###### montamos directorio cifrado####"
+
+function mount_disk() {
+sudo mount -t ext4 ${DEVICE_MAP} ${DEVICE_NAME}
 }
 
-echo "#### Las unidades montadas actualmente son:" 
-	chequeo_unidad
-sleep 3
-echo ""
-exit 0
+mount_disk
