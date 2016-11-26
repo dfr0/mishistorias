@@ -10,9 +10,9 @@
 DAY=`date +%d`
 MONTH=`date +%m`
 YEAR=`date +%Y`
-BKDIR="/home/myhouse/misbackups/$YEAR/$MONTH/$DAY"
-BKLOG="/home/myhouse/misbackups/$YEAR/$MONTH/$DAY.log"
-ARRPOS=0 
+BKDIR="/home/$USER/misbackups/$YEAR/$MONTH/$DAY"
+BKLOG="/home/$USER/misbackups/$YEAR/$MONTH/$DAY.log"
+ARRPOS="0" 
 
 echo "Quieres hacer un backup?"
 
