@@ -2,13 +2,13 @@
 
 PROGRAM="/opt/teamviewer/tv_bin/script/teamviewer &"
 KILL="sudo pkill teamvi*"
-COUNT="ps aux | grep teamviewer | grep -v grep | wc -l"
+PROCESS="ps aux | grep teamvi* | wc -l"
 
-
-function remote_up() {
-$KILL && echo "Starting remote asistant" && $PROGRAM
+function remote_up () {
+$KILL  && $PROGRAM 
 }
 
-while [ $COUNT -lt 1 ]
-do remote_up
-done
+
+if [ "${PROCESS}" < 0 ]; then
+remote_up;
+fi

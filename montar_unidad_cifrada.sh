@@ -3,8 +3,8 @@
 DEVICE="/dev/sda5"
 PARTITION_NAME="misdatos"
 DEVICE_NAME="datos_sensibles"
-DEVICE_MAP="/dev/mapper/${DEVICE_NAME}"
-DEVICE_MOUNT_POINT="/mnt/${DEVICE_NAME}"
+DEVICE_MAP="/dev/mapper/${PARTITION_NAME}"
+DEVICE_MOUNT_POINT="/mnt/${PARTITION_NAME}"
 
 echo "####Proceso para montar la unidad cifrada####"
 
