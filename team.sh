@@ -8,7 +8,6 @@ function remote_up () {
 $KILL  && $PROGRAM 
 }
 
-
 if [ "${PROCESS}" < 0 ]; then
 remote_up;
 fi
