@@ -15,12 +15,15 @@ import sys, os
 
 # Main definition - constants
 menu_actions  = {}  
+
+
+def remote_connect():
+	input = HOST()
+	os.system("ssh -t HOST()")
  
-
-# =============== #
-# Menu Functions  #
-# =============== #
-
+# ==================== 
+#      Menu Parts      
+# ==================== 
 
 # Menu principal
 def main_menu():
@@ -33,9 +36,8 @@ def main_menu():
     print "3. Sysadmin Tools"
     print "4. Security"
     print "\n0. Salir"
-    elecion = raw_input(" >>  ")
+    choice = raw_input(" >>  ")
     exec_menu(choice)
- 
     return
  
 # Execute menu
@@ -58,15 +60,18 @@ def menu1():
     print "1. CPU, Memory, process, etc..."
     print "9. Volver"
     print "0. Salir"
-    choice = raw_input(" >>  ")
+    choice = input("Selecciona una opcion  ")
+    if choice == '1':
+      os.system("print remote_connect", 'htop')
+    break
+    elif:
     exec_menu(choice)
     return
- 
  
 # Menu2: Gestion de identidades IDM
 def menu2():
     print "Gestion de identidades IDM!\n"
-    print "Crear usuario en el sistema!\n"
+    print "1. Crear usuario en el sistema!\n"
     print "9. Volver"
     print "0. Salir" 
     choice = raw_input(" >>  ")
@@ -77,7 +82,7 @@ def menu2():
 # Menu3: Sysadmin Tools
 def menu3():
     print "Sysadmin Tools!\n"
-    print "1. Reboot computer !\n"
+    print "1. Reiniciar servidor!\n"
     print "9. Volver"
     print "0. Salir"
     choice = raw_input(" >>  ")
@@ -98,100 +103,43 @@ def menu4():
 def back():
     menu_actions['main_menu']()
  
-# Exit program
+# Salir del programa
 def exit():
     sys.exit()
  
-# =======================
-#    MENUS DEFINITIONS
-# =======================
+# ==================================
+#    Definicion de que hace el menu
+# ==================================
  
 # Menu definition
 menu_actions = {
     'main_menu': main_menu,
     '1': menu1,
     '2': menu2,
+    '3': menu3,
+    '4': menu4,
     '9': back,
     '0': exit,
 }
  
-# =======================
-#      MAIN PROGRAM
-# =======================
+# =================================
+#     Menu: Programacion principal
+# =================================
  
-# Main Program
+# Programa principal
+
 if __name__ == "__main__":
-    # Launch main menu
+
+    # Lanzar menu principal
     main_menu()
 
 
+# =================================================
+#    Menu: Programacion de las funciones del menu
+# =================================================
 
-
-
-
-# This Python file uses the following encoding: utf-8
-import os, sys
-
-def menu():
-	"""
-	Función que limpia la pantalla y muestra nuevamente el menu
-	"""
-	os.system('clear') # NOTA para windows tienes que cambiar clear por cls
-
-	print ("Selecciona una opción")
-
-	print ("\t1 - Monitorizacion")
-
-	print ("\t2 - Gestion de identidades IDM")
-
-	print ("\t3 - ADM Herramientas de administradores")
-
-	print ("\t9 - salir")
-
-while True:
-
-	# Mostramos el menu
-
-	menu()
-
-	# solicitamos una opción al usuario
-	opcionMenu = input("inserta un numero valor >> ")
-
-
-	if opcionMenu=="1":
-
-		print ("")
-
-		input("Monitorizacion...\npulsa una tecla para continuar")
-
-
-	elif opcionMenu=="2":
-
-		print ("")
-
-		input("Has pulsado la opción 2...\npulsa una tecla para continuar")
-
-	elif opcionMenu=="3":
-
-		print ("")
-
-		input("Has pulsado la opción 3...\npulsa una tecla para continuar")
-
-	elif opcionMenu=="9":
-
-		break
-
-	else:
-
-		print ("")
-
-		input("No has pulsado ninguna opción correcta...\npulsa una tecla para continuar")
-
-
-#### Crear Grupo
-
-	@ Create_group()
-	os.system('groupadd -g ')
 	
+
+
 
 
