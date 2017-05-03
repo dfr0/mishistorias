@@ -1,6 +1,6 @@
 #!/bin/bash
 # Script para hacer de todo
-# Autor: David Faro 
+# Autor: David
 #
 #
 
