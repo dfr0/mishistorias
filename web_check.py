@@ -1,13 +1,16 @@
 #!/usr/bin/python2.7
 # This Python file uses the following encoding: utf-8
 
-import sys, os, requests
+import requests, sys
 
-url = str(sys.argv[1])
-#p = format(sys.argv[2])
+#enlace = raw_input(sys.argv[1])
 
-r = requests.get (url)
+url = raw_input("Que web quieres chequear?: ")
+response = requests.get(url)
+response.time = requests.get(url).elapsed.total_seconds
 
-print ('Web chequeada: ',url)
-print ('Codigo Respuesta: ', r)
+print ("Respuesta de la web", response.status_code)
+print ("Tiempo de respuesta", response.time)
+
+
 
