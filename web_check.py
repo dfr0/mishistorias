@@ -43,8 +43,17 @@ def chequeo():
   if rcode[1] in apacheok:
 	  print(Fore.GREEN + 'PETICIONES CORRECTAS' + Style.RESET_ALL)
 	  print(rcode)
+  elif rcode[1] in apacheredirect:
+	  print(Fore.BLUE + 'REDIRECCION' + Style.RESET_ALL)
+	  print(rcode)
+  elif rcode[1] in apacheclienterror:
+	  print(Fore.RED + 'ERROR EN EL CLIENTE' + Style.RESET_ALL)
+	  print(rcode)
+  elif rcode[1] in apacheservererror:
+	  print(Fore.RED + 'ERROR EN EL SERVIDOR' + Style.RESET_ALL)
+	  print(rcode)
   else:
-	  print("compra una moto")
+	  print("RESPUESTA DESCONOCIDA")
 	  print(rcode)
 
 while (segundos > 0):
@@ -53,7 +62,7 @@ while (segundos > 0):
        	print('Restantes: ', segundos)
        	segundos = (segundos - 1)
 
-print "Terminamos el escaneo"
+print Fore.CYAN + "Terminamos el escaneo" + Style.RESET_ALL
 
 
 
