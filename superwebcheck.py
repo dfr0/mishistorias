@@ -26,7 +26,10 @@ apacheok = range(200,208)
 apacheredirect = range(300,308)
 apacheclienterror = range(400, 451)
 apacheservererror =  range(500, 512)
+error_counter = 0
+ok_counter = (segundos_iniciales - error_counter)
 
+''' La chicha '''
 
 def chequeo():
   response = requests.get(url)
@@ -37,6 +40,7 @@ def chequeo():
   rtime = ("Tiempo de respuesta", response.time) 
   if rtime[1] > badtime:
 	  print (Fore.RED + 'MALOS TIEMPOS DE RESPUESTA' + Style.RESET_ALL)
+  	  error_counter = error_counter +1
 	  print(rtime)
   else:
 	  print (Fore.GREEN + 'BUENOS TIEMPOS DE RESPUESTA' + Style.RESET_ALL)
@@ -66,12 +70,18 @@ while (segundos > 0):
        	segundos = (segundos - 1)
 
 
+''' Muestra los resultados  '''
+
+
 print
 print cabecera
 print Fore.BLACK + "RESULTADOS" + Style.RESET_ALL
 print cabecera
-print Fore.CYAN + "ESCANEO FINALIZADO" + Style.RESET_ALL
+print Fore.BLACK + "ESCANEO FINALIZADO" + Style.RESET_ALL
+print cabecera
 print Fore.CYAN + "NUMERO DE PRUEBAS: " + Style.RESET_ALL , segundos_iniciales
+print Fore.RED + "PETICIONES FALLIDAS ERRORES: " + Style.RESET_ALL , error_counter
+print Fore.GREEN + "PETICIONES CORRECTAS: " + Style.RESET_ALL , ok_counter
 print
 print
 
