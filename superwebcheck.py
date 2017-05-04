@@ -3,8 +3,8 @@
 #Check Webpage By David F
 
 import requests, sys, os, math
-
 from colorama import init, Fore, Back, Style
+from collections import Counter
 
 ''' Formateo de estilos al arrancar '''
 
@@ -18,13 +18,15 @@ os.system('clear')
 
 cabecera = ("===============================")
 url = raw_input("Que web quieres chequear?: ")
-segundos = int(input("Segundos del escaneo: "))
+segundos = int(input("Numero de chequeos a realizar wey: "))
+segundos_iniciales = segundos
 segundos = int(segundos)
 badtime = +0.8
 apacheok = range(200,208)
 apacheredirect = range(300,308)
 apacheclienterror = range(400, 451)
 apacheservererror =  range(500, 512)
+
 
 def chequeo():
   response = requests.get(url)
@@ -34,10 +36,10 @@ def chequeo():
   rcode = ("Codigo de respuesta", response.status_code)
   rtime = ("Tiempo de respuesta", response.time) 
   if rtime[1] > badtime:
-	  print(Fore.RED + 'MALOS TIEMPOS DE RESPUESTA' + Style.RESET_ALL)
+	  print (Fore.RED + 'MALOS TIEMPOS DE RESPUESTA' + Style.RESET_ALL)
 	  print(rtime)
   else:
-	  print(Fore.GREEN + 'BUENOS TIEMPOS DE RESPUESTA' + Style.RESET_ALL)
+	  print (Fore.GREEN + 'BUENOS TIEMPOS DE RESPUESTA' + Style.RESET_ALL)
 	  print(rtime)
 
   if rcode[1] in apacheok:
@@ -55,6 +57,7 @@ def chequeo():
   else:
 	  print("RESPUESTA DESCONOCIDA")
 	  print(rcode)
+  	  
 
 while (segundos > 0):
 	chequeo()
@@ -62,10 +65,15 @@ while (segundos > 0):
        	print('Restantes: ', segundos)
        	segundos = (segundos - 1)
 
-print Fore.CYAN + "Terminamos el escaneo" + Style.RESET_ALL
 
-
-
+print
+print cabecera
+print Fore.BLACK + "RESULTADOS" + Style.RESET_ALL
+print cabecera
+print Fore.CYAN + "ESCANEO FINALIZADO" + Style.RESET_ALL
+print Fore.CYAN + "NUMERO DE PRUEBAS: " + Style.RESET_ALL , segundos_iniciales
+print
+print
 
 
 
