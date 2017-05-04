@@ -2,7 +2,7 @@
 # This Python file uses the following encoding: utf-8
 #Check Webpage By David F
 
-import requests, sys, os, math
+import requests, sys, os, math, ssl, re
 from colorama import init, Fore, Back, Style
 from collections import Counter
 
@@ -19,13 +19,15 @@ os.system('clear')
 cabecera = ("===============================")
 url = raw_input("Que web quieres chequear?: ")
 segundos = int(input("Numero de chequeos a realizar wey: "))
+#patron = raw_input("Patron a buscar en la web: ")
+#patron_search =  search(patron)
 segundos_iniciales = segundos
 segundos = int(segundos)
 badtime = +0.8
 apacheok = range(200,208)
 apacheredirect = range(300,308)
 apacheclienterror = range(400, 451)
-apacheservererror =  range(500, 512)
+apacheservererror = range(500, 512)
 error_counter = 0
 ok_counter = (segundos_iniciales - error_counter)
 
@@ -33,7 +35,8 @@ ok_counter = (segundos_iniciales - error_counter)
 
 def chequeo():
   response = requests.get(url)
-  response.time = requests.get(url).elapsed.total_seconds()
+  #response.content
+  response.time = requests.get(url, timeout=10).elapsed.total_seconds()
   print(Style.DIM + cabecera + Style.RESET_ALL)
   print(Style.BRIGHT + "Web chequeada: " + Style.RESET_ALL +  url)
   rcode = ("Codigo de respuesta", response.status_code)
@@ -71,7 +74,6 @@ while (segundos > 0):
 
 
 ''' Muestra los resultados  '''
-
 
 print
 print cabecera
