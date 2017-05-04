@@ -34,10 +34,10 @@ def chequeo():
   rcode = ("Codigo de respuesta", response.status_code)
   rtime = ("Tiempo de respuesta", response.time) 
   if rtime[1] > badtime:
-	  print(Fore.RED + 'BAD TIME' + Style.RESET_ALL)
+	  print(Fore.RED + 'MALOS TIEMPOS DE RESPUESTA' + Style.RESET_ALL)
 	  print(rtime)
   else:
-	  print(Fore.GREEN + 'GOOD TIME' + Style.RESET_ALL)
+	  print(Fore.GREEN + 'BUENOS TIEMPOS DE RESPUESTA' + Style.RESET_ALL)
 	  print(rtime)
 
   if rcode[1] in apacheok:
