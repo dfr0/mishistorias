@@ -12,14 +12,11 @@
  
 # Import the modules needed to run the script.
 import sys, os
+from subprocess import Popen
 
 # Main definition - constants
 menu_actions  = {}  
 
-
-def remote_connect():
-	input = HOST()
-	os.system("ssh -t HOST()")
  
 # ==================== 
 #      Menu Parts      
@@ -62,9 +59,7 @@ def menu1():
     print "0. Salir"
     choice = input("Selecciona una opcion  ")
     if choice == '1':
-      os.system("print remote_connect", 'htop')
-    break
-    elif:
+	    top()
     exec_menu(choice)
     return
  
@@ -107,6 +102,11 @@ def back():
 def exit():
     sys.exit()
  
+# Hacer un top
+
+def top():
+	os.system(top)
+
 # ==================================
 #    Definicion de que hace el menu
 # ==================================
