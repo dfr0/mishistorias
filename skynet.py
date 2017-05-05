@@ -102,11 +102,6 @@ def back():
 def exit():
     sys.exit()
  
-# Hacer un top
-
-def top():
-	os.system(top)
-
 # ==================================
 #    Definicion de que hace el menu
 # ==================================
