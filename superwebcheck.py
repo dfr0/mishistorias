@@ -24,6 +24,7 @@ segundos = int(input("Numero de chequeos a realizar wey: "))
 #patron = raw_input("Patron a buscar en la web: ")
 #patron_search =  search(patron)
 segundos_iniciales = segundos
+error_counter = 0
 segundos = int(segundos)
 badtime = +0.8
 apacheok = range(200,208)
@@ -44,8 +45,7 @@ def chequeo():
   rtime = ("Tiempo de respuesta", response.time)
   if rtime[1] > badtime:
 	  print (Fore.RED + 'MALOS TIEMPOS DE RESPUESTA' + Style.RESET_ALL)
-	  error_counter = 0
-  	  error_counter = error_counter +1
+  	  error_counter +1
 	  print(rtime)
   else:
 	  print (Fore.GREEN + 'BUENOS TIEMPOS DE RESPUESTA' + Style.RESET_ALL)
