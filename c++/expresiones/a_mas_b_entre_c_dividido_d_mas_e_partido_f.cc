@@ -14,7 +14,7 @@ int main(){
 	 cout<<"Digite el valor de e: "; cin>>e;
 	 cout<<"Digite el valor de f: "; cin>>f;
 
-	 resultado = (a + b / c) / ( d + e / f);
+	 resultado = (a + ( b / c)) / ( d + ( e / f));
 
 	 cout.precision(2); //redondeo y puntos de redondeo, dos, solamente mostraria un diginal despues de la coma
   	 cout<<"\nEl resultado es: "<<resultado<<endl;
