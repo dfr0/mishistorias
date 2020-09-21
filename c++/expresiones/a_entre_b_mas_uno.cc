@@ -5,12 +5,12 @@
 using namespace std;
 
 int main(){
-        float a, b, resultado = 0;
+        float a, b ,resultado = 0;
 
-        cout<<"Digite el valor de a: "; cin>>a;
-        cout<<"Digite el valor de b: "; cin>>b;
+         cout<<"Digite el valor de a: "; cin>>a;        
+	 cout<<"Digite el valor de b: "; cin>>b;
 
-        resultado = (a / b) + 1; // se puede poner sin parentesis porque va antes que la suma
+        resultado = (a + b) + 1;
 
 	cout.precision(2); //redondeo y puntos de redondeo, dos, solamente mostraria un diginal despues de la coma
 	cout<<"\nEl resultado es: "<<resultado<<endl;
