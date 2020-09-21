@@ -11,6 +11,8 @@ int main(){
         cout<<"Digite el valor de b: "; cin>>b;
 
         resultado = (a / b) + 1; // se puede poner sin parentesis porque va antes que la suma
+
+	cout.precision(2); //redondeo y puntos de redondeo, dos, solamente mostraria un diginal despues de la coma
 	cout<<"\nEl resultado es: "<<resultado<<endl;
 
 return 0;
