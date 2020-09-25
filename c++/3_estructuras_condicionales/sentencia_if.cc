@@ -22,7 +22,7 @@ int main(){
 	cout<<"Digite un numero: ";
 	cin>>numero;
 
-	if(numero == dato){ //== es el operador de igualdad no de operacion
+	if(numero == dato){ //== es el operador de igualdad no de operacion, el operador contrario es !=
 		cout<<"El numero es 5";
 	}
 	else {
