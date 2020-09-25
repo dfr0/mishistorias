@@ -12,13 +12,22 @@ kWh x días del mes = consumo energético mensual*/
 
 
 #include<iostream>
+#include<math.h>
 
 using namespace std;
 
 int main (){
+	float watts, gasto_mensual,conversion_kwatts;
+	int uso,horas;
+	
+	cout<<"\nCuantos wattios de potencia tiene tu aparato? ";cin>>watts;
+	cout<<"\nCuantas horas lo usas al día? ";cin>>horas;
 
-
-
+	conversion_kwatts = watts / 1000 ;
+	uso = (horas * 30);
+	gasto_mensual = uso * watts;
+	
+	cout<<"\nEl gasto mensual de tu aparato es de Kwh: "<<gasto_mensual<<endl;
 
 return 0;
 }
