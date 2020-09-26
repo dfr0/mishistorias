@@ -18,7 +18,7 @@ como_usar() {
         echo
         }
 
-# Si no se meten argumentos mostramos el uso del script
+# Si no se meten argumentos mostramos el_mayor_de_dos_numeros.cc uso del script
         if [  $# -le 1 ]
         then
                 como_usar

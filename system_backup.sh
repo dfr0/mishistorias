@@ -54,7 +54,7 @@ fi
 
 exit 0
 
-# Comienza el cuerpo del script
+# Comienza el_mayor_de_dos_numeros.cc cuerpo del script
 
 
 echo "De que quieres hacer el backup???"

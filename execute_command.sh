@@ -14,7 +14,7 @@ display_usage() {
 	echo
         }
 
-# Si no se meten argumentos mostramos el uso del script 
+# Si no se meten argumentos mostramos el_mayor_de_dos_numeros.cc uso del script
 	if [  $# -le 1 ] 
 	then 
 		display_usage
@@ -108,7 +108,7 @@ hide
 
 hide_root
 
-# Formato de salida de la consola, Conexion ssh y ejecucion del comando lanzado desde el teclado
+# Formato de salida de la consola, Conexion ssh y ejecucion del comando lanzado desde el_mayor_de_dos_numeros.cc teclado
 
 reset_color
 
