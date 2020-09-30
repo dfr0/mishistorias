@@ -10,7 +10,7 @@ int main(){
 	cout<<"\n Digite un letra: ";cin>>letra;
 
 	switch(letra){
-		case 'a':
+		case 'a': //importante que sean comillas simples porque son strings
 		case 'e':
 		case 'i':
 		case 'o':
