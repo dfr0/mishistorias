@@ -12,7 +12,7 @@ int main(){
 	cout<<"\nDigita un cuarto numero para ver si coincide con los anteriores: ";cin>>n4;
 
 
-	if((n4==n3)||(n4==n2)||(n4==n1)){ // para comparar un O se usan los ||
+	if((n4==n3)||(n4==n2)||(n4==n1)){ // para comparar un O se usan los || asi se cumple al menos uno.
 		cout<<"\nEl cuarto numero es igual a alguno de los anteriores"<<endl;
 	}
 	else {
