@@ -10,7 +10,7 @@ using namespace std;
 int main(){
 	int numero;
 
-	cout<<"\nDigite un numero entre 1 y 12 ";
+	cout<<"\nDigite un numero entre 1 y 12 "<<endl;cin>>numero;
 
 
 	switch(numero){
@@ -26,6 +26,7 @@ int main(){
 		case 10: cout<<"octubre"<<endl;break;
 		case 11: cout<<"noviembre"<<endl;break;
 		case 12: cout<<"diciembre"<<endl;break;
+		default: cout<<"No existe mes para ese numero"<<endl;break;
 	}
 
 return 0;
