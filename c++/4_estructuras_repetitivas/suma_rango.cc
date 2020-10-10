@@ -8,15 +8,14 @@
 using namespace std;
 
 int main(){
-	int numero,suma;
-	int i = 0; //inicializo contador
+	int numero,suma = 0;
 	
 	do{
 		cout<<"\nIntroduzca numeros enteros: ";cin>>numero;
-		if (numero >= 0){
+		if (numero > 0){
 			suma += numero;
 		}
-	}while(numero <20 || numero >30);
+	}while( ((numero <20 || numero >30)) && (numero != 0));
 
 	cout<<"Los numeros introduccidos mayores de 0 suman: "<<suma<<endl;
 return 0;
