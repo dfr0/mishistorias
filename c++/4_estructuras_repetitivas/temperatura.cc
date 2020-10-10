@@ -12,8 +12,7 @@ int main(){
 	for(int i=0;i<=24;i+=4){ //aqui no usamos i++ por aqui necesitamos aumentar de 4 en 4. igual a i + 4
 		cout<<"Digite la temperatura de la hora: "<<i<<": ";
 		cin>>temperatura;
-		sumaTotal = sumaTotal + temperatura;
-		// ahora vamos a calcular la temperatura mayor y menor
+		sumaTotal = sumaTotal += temperatura; // 
 	}
 	if (temperatura > mayor){
 		mayor = temperatura; //24, irá guardando la mayor temperatura.
