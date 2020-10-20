@@ -6,13 +6,13 @@
 using namespace std;
 
 int main(){
-	int n,suma;
+	int n,elevacion;
 	cout<<"\nDigite el valor de N en 2^n ";cin>>n;
 
 	for(int i=1;i<=n;i++){
 
-	suma += pow(2,n);
-	cout<<"\nEl resultado es de la suma de potencias de 2^n es: "<<suma<<endl;
+	elevacion += pow(2,i); // i porque elevamos a cada elemento de la iteracion
+	cout<<"\nEl resultado es de la suma de potencias de 2^n es: "<<elevacion<<endl;
 	}
 return 0;
 }
