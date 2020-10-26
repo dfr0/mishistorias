@@ -1,0 +1,12 @@
+que es un vector o array o arreglo?
+
+un vector o array unidimensional es un tipo de datos que almacena una secuencia de datos del mismo tipo.
+Los elementos de un vector se almacenan en zonas contiguas de memoria y se puede acceder a ellos de manera directa
+mediante un indice o posicion.
+
+2 5 8 1 9
+0 1 2 3 4 EN los enteros comienzan con 0 asi que el numero de elementos es n -1 
+
+tipo nombre[tamaño];
+
+int numeros[10]
