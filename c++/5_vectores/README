@@ -9,4 +9,23 @@ mediante un indice o posicion.
 
 tipo nombre[tamaño];
 
-int numeros[10]
+int numeros[10];
+char letras[5];
+float reales[15];
+
+la inicializacion del vector:
+
+int numero[]={1,4,6,7,3};
+	      0 1 2 3 4
+
+numero[0] = 1
+numero[1] = 4 
+etc...
+
+
+char letra[] = {'a','e','i','o','i'}
+
+letra[0] = a
+etc..
+
+
