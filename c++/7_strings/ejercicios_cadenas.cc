@@ -13,7 +13,7 @@ int main(){
 	char titulo[50];
 	char usuario[30];
 
-	cout<<"Digite su nombre de usuario "<<endl;cin>>usuario;
+	cout<<"Digite su nombre de usuario "<<endl;cin.getline(usuario,20,'\n');
 
 	strcpy(titulo,cabecera);
 
