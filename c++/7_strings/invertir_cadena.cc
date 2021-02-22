@@ -3,15 +3,12 @@
 //
 #include<iostream>
 #include<string.h>
+#include<algorithm>
 
 using namespace std;
 
 int main(){
-	char cad[20] = "david"; //no disponible en linux por el gcc osea el compilador
-
-	strrev(cad);
-
+	string cad = "David";
+	reverse(cad.begin(), cad.end()); //tenemos que usar reverse porque en POSIX no tenemos strrev
 	cout<<cad<<endl;
-
-return 0;
 }
