@@ -1,0 +1,11 @@
+package herencia;
+
+public class Estudiante {
+	
+	private String noControl;
+
+	public void setControl (String noControl){
+		this.noControl = noControl;
+	}
+
+}

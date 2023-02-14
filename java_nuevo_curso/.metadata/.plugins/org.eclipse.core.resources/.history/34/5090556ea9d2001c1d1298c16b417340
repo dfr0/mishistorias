@@ -1,0 +1,25 @@
+package herencia;
+
+public class MainRunner {
+
+	public static void main(String[] args) {
+		//Contructor que crea el objeto (implicito by default)
+		//Persona p = new Persona(); //p es una referencia, apunta a un objeto del tipo persona
+		//los () llaman al constructor
+		//Si creamos un explicito tenemos que pasar los datos al constructor obligatoriamente
+		//Persona p = new Persona("David",(byte)17,'b');
+		//Persona p2 = new Persona("David",(byte)17);
+		
+		Estudiante estudiante = new Estudiante();
+		estudiante.setControl("Sin control");
+		System.out.println(estudiante);
+		
+		//p.setRaza("caucasico");
+		//p.setNombre("David");
+		//p.setSexo('B');
+		//p.setEdad((byte)38); //hacer casting tipo byte
+		
+		//p.MostarMetodo();
+	}
+
+}

@@ -1,0 +1,18 @@
+package herencia;
+
+//en java todos los elementos son elementos del tipo object y todos los que creemos
+//van a ederar todas las caracteristicas de el object.
+
+public class Estudiante {
+	
+	private String noControl;
+
+	public void setControl (String noControl){
+		this.noControl = noControl;
+	}
+	
+	public String getControl() {
+		return noControl;
+	}
+
+}

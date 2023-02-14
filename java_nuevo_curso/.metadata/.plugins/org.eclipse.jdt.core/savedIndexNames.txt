@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+/Users/earth/java_nuevo_curso/.metadata/.plugins/org.eclipse.jdt.core
+3431257185.index
+1763418382.index
+2353178382.index
+611947347.index
+4198939195.index
+1261686613.index
