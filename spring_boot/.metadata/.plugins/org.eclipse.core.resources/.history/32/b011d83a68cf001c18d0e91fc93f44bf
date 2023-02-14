@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class TryWithResourcesRunner {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+			
+		int[] numbers = {13, 3,4,5};
+		int number = numbers[5];
+		
+		scanner.close();
+		
+		// if the exception has so many times can be do a memory leak, we use close to avoid it.
+		System.out.println("After scanner close");
+	}
+}

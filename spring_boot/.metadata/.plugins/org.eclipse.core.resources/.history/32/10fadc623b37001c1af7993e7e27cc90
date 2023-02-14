@@ -1,0 +1,17 @@
+package com.in28minutes.funcionalprogramming;
+
+import java.util.List;
+
+public class FuncionalProgrammingRunner {
+
+	public static void main(String[] args) {
+		//Procedural programming
+		List<String> list = List.of("Apple","banana", "cherry");
+		for(String string:list) {
+			System.out.println(list);
+		}
+		
+	}
+
+}
+ 

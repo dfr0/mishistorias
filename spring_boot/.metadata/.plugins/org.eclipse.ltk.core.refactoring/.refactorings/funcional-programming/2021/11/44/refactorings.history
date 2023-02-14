@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;private static void printBasic(List&lt;String&gt; list)&apos; from &apos;com.in28minutes.funcionalprogramming.FuncionalProgrammingRunner.main(...)&apos; to &apos;com.in28minutes.funcionalprogramming.FuncionalProgrammingRunner&apos;&#x0A;- Original project: &apos;funcional-programming&apos;&#x0A;- Method name: &apos;printBasic&apos;&#x0A;- Destination type: &apos;com.in28minutes.funcionalprogramming.FuncionalProgrammingRunner&apos;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;printBasic&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;com.in28minutes.funcionalprogramming{FuncionalProgrammingRunner.java" name="printBasic" replace="false" selection="245 62" stamp="1635874437868" version="1.0" visibility="2"/>
+</session>

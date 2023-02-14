@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Book.java&apos; to &apos;introduction-to-object-oriented-programming/src/com.in28minutes.oops&apos;&#x0A;- Original project: &apos;introduction-to-object-oriented-programming&apos;&#x0A;- Destination element: &apos;introduction-to-object-oriented-programming/src/com.in28minutes.oops&apos;&#x0A;- Original element: &apos;Book.java&apos;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;com.in28minutes.oops" element1="/src&lt;{Book.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1627753660153" units="1" version="1.0"/>
+</session>
