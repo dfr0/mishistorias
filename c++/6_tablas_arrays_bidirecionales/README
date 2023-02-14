@@ -1,0 +1,14 @@
+vector de vectores, o lo que es lo mismo, una matriz, tambien comienzan desde el 0
+
+tipo_nombre[nfilas][ncolumnas]
+
+AGREGAR ELEMENTOS A UNA MATRIZ EXISTENTE
+
+int numeros[2][3] = {1,2,3 , 4,5,6} //  primera definicion primera columna con 3 elementos y despues de la coma la segunda columna con otros 3 elementos.
+
+tambien podemos hacerlo asi int numeros[2][3] = {{1,2,3},{4,5,6}} 
+
+otra forma mas int numeros[2][3] = {1,2,3,
+				    4,5,6}
+
+cout<<numeros[1][2] // seria el 6

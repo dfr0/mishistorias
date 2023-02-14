@@ -1,0 +1,5 @@
+Solamente tiene metodos abstractos.
+No puedo definir variables solamente constantes.
+No puede haber constructores.
+No es una clase
+no usan herencias, se usa implements en vez de extents.
