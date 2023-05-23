@@ -16,5 +16,4 @@ public class IndexController {
         return "index"; //se mete la pagina en src estaticos
 
     }
-   }
 }
