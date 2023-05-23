@@ -7,12 +7,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class IndexController {
 
     //para mapear
-    @RequestMapping(value="/index") //por defecto GET
+    //por defecto GET podemos usar GetMapping también etc..o Post
+    //el value= se puede omitir
+    @RequestMapping({"/index","/","/home"})
 
     //metodo
-    public Static index(){
-
-        return "index"; //se mete en estaticos
+    public String index(){
+        return "index"; //se mete la pagina en src estaticos
 
     }
+   }
 }
