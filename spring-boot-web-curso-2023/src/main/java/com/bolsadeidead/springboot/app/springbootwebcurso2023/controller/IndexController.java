@@ -28,6 +28,7 @@ public class IndexController {
         usuario.setNombre("David");
         usuario.setApellido("Faro");
         model.addAttribute("usuario",usuario);
+        model.addAttribute("titule","Perfil del usuario es: ".concat(usuario.getNombre()));
         return "perfil";
     }
 
