@@ -14,7 +14,7 @@ public class IndexController {
     //para mapear
     //por defecto GET podemos usar GetMapping también etc..o Post
     //el value= se puede omitir
-    @RequestMapping({"/index","/","/home"}) //como tenemos / poner al final del primer nivel /app
+    @RequestMapping({"/index","/","/home"}) //como tenemos / poner al final del primer nivel /app con otro "" vacio
     //metodo
     public String index(Model model) {
         model.addAttribute("titulo,Hola spring framework");
