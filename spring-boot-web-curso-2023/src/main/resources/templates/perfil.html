@@ -2,11 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title th:text="${titulo}"</title>
+  <title th:text="${titulo}">Insert title here </title>
 </head>
 <body>
-<main>
-  <h1>"${titulo}"</h1>
-</main>
+  <h1> th:text="${titulo}"</h1>
+  <span>th:text="${usuario.nombre}"</span>
+  <span>th:text="${usuario.apellido}"</span>
 </body>
 </html>
