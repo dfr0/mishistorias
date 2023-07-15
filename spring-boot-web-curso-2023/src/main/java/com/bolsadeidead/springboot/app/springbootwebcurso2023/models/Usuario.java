@@ -3,6 +3,16 @@ package com.bolsadeidead.springboot.app.springbootwebcurso2023.models;
 //desacoplada del framework
 public class Usuario {
 
+
+    public Usuario(){
+
+    }
+    public Usuario(String nombre, String apellido, String email) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+    }
+
     private String nombre;
     private String apellido;
 
