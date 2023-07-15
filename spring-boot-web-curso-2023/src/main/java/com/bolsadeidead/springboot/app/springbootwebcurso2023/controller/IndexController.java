@@ -5,6 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 @Controller //componente de spring tipo controlador
@@ -27,10 +30,20 @@ public class IndexController {
         Usuario usuario = new Usuario();
         usuario.setNombre("David");
         usuario.setApellido("Faro");
+        usuario.setEmail("davidfaro@gmail.com");
         model.addAttribute("usuario",usuario);
         model.addAttribute("titule","Perfil del usuario es: ".concat(usuario.getNombre()));
         return "perfil";
     }
+
+    @RequestMapping("/listar")
+    public String listar(Model model){
+        List<Usuario> usuarios = new ArrayList<>(); //metodo
+        model.addAttribute("titulo","Listado de usuarios");
+        model.addAttribute("usuarios",usuarios);
+        return "listar";
+    }
+
 
     /*podemos usar el map de utils para lo mismo, también puede usarse modelandview
     @GetMapping("/index2")
