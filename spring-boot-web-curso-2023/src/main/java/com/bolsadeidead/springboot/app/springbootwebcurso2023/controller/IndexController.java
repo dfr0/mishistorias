@@ -17,7 +17,7 @@ public class IndexController {
     @RequestMapping({"/index","/","/home"}) //como tenemos / poner al final del primer nivel /app con otro "" vacio
     //metodo
     public String index(Model model) {
-        model.addAttribute("titulo,Hola spring framework");
+        model.addAttribute("titulo", "Hola spring framework");
         return "index"; //se mete la pagina en src estaticos
 
     }
