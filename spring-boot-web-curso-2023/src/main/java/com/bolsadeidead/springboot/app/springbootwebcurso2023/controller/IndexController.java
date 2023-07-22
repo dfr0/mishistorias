@@ -4,9 +4,11 @@ import com.bolsadeidead.springboot.app.springbootwebcurso2023.models.Usuario;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -39,14 +41,22 @@ public class IndexController {
     @RequestMapping("/listar")
     public String listar(Model model){
         List<Usuario> usuarios = new ArrayList<>(); //metodo
-        usuarios.add(new Usuario("andres","pollas","andres@joe.mail"));
-        usuarios.add(new Usuario("paco","palote","paco@joe.mail"));
-        usuarios.add(new Usuario("guille","moñas","guille@joe.mail"));
+        //usuarios.add(new Usuario("andres","pollas","andres@joe.mail")); //comented due modelattribute list.
+        //usuarios.add(new Usuario("paco","palote","paco@joe.mail")); //comented due modelattribute list.
+        //usuarios.add(new Usuario("guille","moñas","guille@joe.mail")); //comented due modelattribute list.
         model.addAttribute("titulo","Listado de usuarios");
-        model.addAttribute("usuarios",usuarios);
+        //model.addAttribute("usuarios",usuarios); //comented due modelattribute list.
         return "listar";
     }
 
+    @ModelAttribute("usuarios") //aplicable a todos los metodos del controlador. usado normalmente para pasar datos a la vista y poblar clos SELECT
+    public List<Usuario> poblarUsuarios() {
+        List<Usuario> usuarios = Arrays.asList(new Usuario("David","guzman","guzman@yahoo.es"),
+        new Usuario("juan","guzma","david@jaja.com"),
+        new Usuario("manolo","guzman","manolo@jaja.com"),
+        new Usuario("pipiolo","guzman","pipiolo@jaja.com"));
+        return usuarios;
+    }
 
     /*podemos usar el map de utils para lo mismo, también puede usarse modelandview
     @GetMapping("/index2")
