@@ -22,4 +22,10 @@ public class EjemploParamsController {
             model.addAttribute("resultado","El texto enviado es: " + texto);
             return "params/ver"; //sirve para pasar parametros en la url
         }
+
+    @GetMapping("/mix-params")
+    public String param(@RequestParam String saludo, @RequestParam Integer numero, Model model) { //todos los paramtros se llaman por nombre
+        model.addAttribute("el saludo es '" + saludo + "'y el numero es '" + numero + "''");
+        return "params/ver"; //sirve para pasar parametros en la url
+    }
 }
