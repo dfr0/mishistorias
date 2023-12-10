@@ -7,9 +7,10 @@
 <body>
 <h1>Enviar parametro del request HTTP GET - URL</h1>
 <ul>
-    <li> <a th:href="@{/params/string(texto='Hola Andres')}">/params/string?texto=Hola Andres</a></li>
+    <li><a th:href="@{/params/string(texto='Hola Andres')}">/params/string?texto=Hola Andres</a></li>
     <li><a th:href="@{/params/string(texto='que tal jon')}">/params/string?texto=que tal jon</a></li>
-    <li><a th:href="@{/params/mix-params(saludo='Como estás andres', numero=7)}">/params/mix-params?saludo=Como estás andres&numero=7</a></li>
+    <li><a th:href="@{/params/mix-params(saludo='Como estás andres', numero=7)}">/params/mix-params?saludo=Como estás Andres&numero=7</a></li>
+    <li><a th:href="@{/params/mix-params-request(saludo='Como estás andres', numero=7)}">/params/mix-params?saludo=Como estás Andres&numero=7</a></li>
 </ul>
 <div th:text="${resultado}"></div>
 </body>
