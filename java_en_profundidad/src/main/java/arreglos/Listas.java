@@ -5,6 +5,29 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.ListIterator;
 
+
+/*Dentro de la interfaz List existen varios tipos de implementaciones realizadas dentro de la plataforma Java. Vamos a analizar cada una de ellas:
+
+ArrayList: esta es la implementación típica. Se basa en un array redimensionable que aumenta
+su tamaño según crece la colección de elementos. Es la que mejor rendimiento tiene sobre la mayoría de situaciones.
+
+LinkedList: esta implementación permite que mejore el rendimiento en ciertas ocasiones.
+Esta implementación se basa en una lista doblemente enlazada de los elementos,
+teniendo cada uno de los elementos un puntero al anterior y al siguiente elemento.
+
+Ninguna de estas implementaciones son sincronizadas; es decir, no se garantiza el estado del List si dos o más hilos acceden de forma concurrente al mismo.
+Esto se puede solucionar empleando una serie de métodos que actúan de wrapper para dotar a estas colecciones de esta falta de sincronización:
+
+List list = Collections.synchronizedList(new ArrayList());
+List list = Collections.synchronizedList(new LinkedList());
+A continuación, vamos a ver cómo se crean los distintos tipos de interfaces:
+
+final List arrayList = new ArrayList();
+final List linkedList = new LinkedList();
+        El cuándo usar una implementación u otra de List variará en función de la situación en la que nos encontremos. Generalmente, ArrayList será la implementación que usemos en la mayoría de situaciones. Sobretodo, varían los tiempos de inserción, búsqueda y eliminación de elementos, siendo en unos casos una solución más óptima que la otra.
+*/
+
+
 public class Listas {
     public static void main(String[] args) {
 
