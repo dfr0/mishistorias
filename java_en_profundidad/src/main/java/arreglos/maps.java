@@ -31,7 +31,14 @@ public class maps {
     public static void main(String[] args) {
 
 
-        final Map<Integer, List> hashMap = new HashMap<Integer, List>();
+        final Map<Integer, String> hashMap = new HashMap<Integer, String>();
+
+        hashMap.put(1, "david");
+        hashMap.size();
+        hashMap.isEmpty();
+        hashMap.get(1);
+
+
 
         final Map<Integer, List> treeMap = new TreeMap<Integer, List>();
 
@@ -46,5 +53,6 @@ public class maps {
     (como se ha podido comprobar en el análisis de Set),
     pero en algunas ocasiones podemos decidir renunciar a este rendimiento a favor de cierta funcionalidad como la ordenación de sus elementos.
      */
+
 
 }
