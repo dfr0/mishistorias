@@ -23,6 +23,7 @@ public class Listas {
         List<String> elementos = new ArrayList<>(listaAutos);
         //Combinamos dos listas
         elementos.addAll(listaNombres);
+
         //Recorrer una lista
         for (String str : elementos) {
             System.out.println("Print with for " + str);
@@ -44,6 +45,12 @@ public class Listas {
         //Eliminar elementos de una lista
 
         //El parametro 0 representa el indice que queremos eliminar
-        listaNombres.remove(0);
+        //listaNombres.remove(0);
+
+        //eliminar elemento mediante el nombre
+        //listaNombres.remove("Roberto");
+
+        //eliminar todos los elementos de una lista
+        //listaNombres.clear();
     }
 }
