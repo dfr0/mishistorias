@@ -2,8 +2,6 @@ package com.bolsadeidead.springboot.app.springbootwebcurso2023.models;
 
 //desacoplada del framework
 public class Usuario {
-
-
     public Usuario(){
 
     }
@@ -12,7 +10,6 @@ public class Usuario {
         this.apellido = apellido;
         this.email = email;
     }
-
     private String nombre;
     private String apellido;
 
@@ -38,5 +35,4 @@ public class Usuario {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
-
 }

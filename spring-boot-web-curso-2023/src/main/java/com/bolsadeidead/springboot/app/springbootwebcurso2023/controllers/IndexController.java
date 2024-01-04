@@ -22,7 +22,6 @@ public class IndexController {
     public String index(Model model) {
         model.addAttribute("titulo", "Hola spring framework");
         return "index"; //se mete la pagina en src estaticos
-
     }
 
     @RequestMapping("/perfil")
@@ -50,7 +49,7 @@ public class IndexController {
     @ModelAttribute("usuarios") //aplicable a todos los metodos del controlador. usado normalmente para pasar datos a la vista y poblar clos SELECT
     public List<Usuario> poblarUsuarios() {
         List<Usuario> usuarios = Arrays.asList(new Usuario("David","guzman","guzman@yahoo.es"),
-        new Usuario("juan","guzma","david@jaja.com"),
+        new Usuario("juan","guzman","david@jaja.com"),
         new Usuario("manolo","guzman","manolo@jaja.com"),
         new Usuario("pipiolo","guzman","pipiolo@jaja.com"));
         return usuarios;
